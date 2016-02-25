@@ -1,0 +1,15 @@
+network-node:
+  name: network-node
+  description: Dedicated network node
+  has_primary: false
+  public_ip_required: true
+  weight: 100                       # weight that will be used for ordering on fuel ui
+  conflicts:
+    - primary-controller
+    - controller
+    - compute
+  limits:
+    min: 1
+  update_required:
+    - primary-controller
+    - controller

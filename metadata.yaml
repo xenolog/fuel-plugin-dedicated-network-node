@@ -1,0 +1,31 @@
+name: dedicated_network_node
+title: Dedicated network node for Openstack ENV.
+version: 9.0.0
+description: Allow to deploy Openstack with dedicated network nodes for handling access to public network.
+fuel_version:
+  - '9.0'
+licenses:
+  - Apache License, Version 2.0
+authors:
+  - 'Sergey Vasilenko <svasilenko@mirantis.com>'
+homepage: https://github.com/xenolog/fuel-plugin-dedicated-network-node
+groups:
+  - network
+releases:
+  - os: ubuntu
+    version: kilo-9.0
+    mode: ['ha']
+    deployment_scripts_path: deployment_scripts/
+    repository_path: repositories/ubuntu
+  - os: ubuntu
+    version: liberty-9.0
+    mode: ['ha']
+    deployment_scripts_path: deployment_scripts/
+    repository_path: repositories/ubuntu
+  - os: ubuntu
+    version: mitaka-9.0
+    mode: ['ha']
+    deployment_scripts_path: deployment_scripts/
+    repository_path: repositories/ubuntu
+package_version: '4.0.0'
+is_hotpluggable: false

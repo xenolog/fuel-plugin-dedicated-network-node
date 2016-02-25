@@ -1,0 +1,11 @@
+- id: dedicated_network_node__override
+  type: puppet
+  version: 2.0.0
+  role: '*'
+  requires: [hiera]
+  required_for: [globals]
+  reexecute_on: [deploy_changes]
+  parameters:
+    puppet_manifest: puppet/manifests/override.pp
+    puppet_modules: puppet/modules:/etc/puppet/modules
+    timeout: 3600

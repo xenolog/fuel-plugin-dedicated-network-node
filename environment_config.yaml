@@ -1,0 +1,24 @@
+attributes:
+  metadata:
+    label: Dedicated network nodes
+    description: Allow to deploy Openstack with dedicated network nodes for handling access to public network.
+    weight: 110
+    group: network
+  neutron_agents:
+    type: "checkbox"
+    weight: 41
+    value: true
+    label: Separate Neutron-agents from controllers to dedicated network node(s)
+    description: Separate Neutron-agents from controllers to dedicated network node(s)
+  public_vip:
+    type: "checkbox"
+    weight: 42
+    value: true
+    label: Separate Public-VIP from controllers to dedicated network node(s)
+    description: Separate Public-VIP from controllers to dedicated network node(s)
+  v_router:
+    type: "checkbox"
+    weight: 43
+    value: true
+    label: Re-locate v-router network namespace from controllers to dedicated network node(s)
+    description: Re-locate v-router network namespace from controllers to dedicated network node(s)
